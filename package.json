@@ -1,0 +1,29 @@
+{
+  "name": "@sakurasz/mini-vite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/mini-vite.cjs.js",
+  "module": "dist/mini-vite.esm-bundler.js",
+  "scripts": {
+    "test": "vitest",
+    "dev": "tsup --watch",
+    "build": "tsup"
+  },
+  "types": "dist/index.d.ts",
+  "buildOptions": {
+    "name": "MiniVite",
+    "formats": [
+      "esm-bundler",
+      "cjs"
+    ]
+  },
+  "author": "suanzi",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/koa": "^2.13.5",
+    "koa": "^2.14.1",
+    "tsup": "^6.5.0",
+    "typescript": "^4.9.3",
+    "vitest": "^0.25.8"
+  }
+}
