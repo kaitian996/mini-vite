@@ -1,5 +1,5 @@
 import Stream from "stream"
-export async function readBody(stream: string | Buffer): Promise<string> {
+export async function readBody(stream: Stream | Buffer): Promise<string> {
     if (stream instanceof Stream) {
         return new Promise((resolve, reject) => {
             let result = ''

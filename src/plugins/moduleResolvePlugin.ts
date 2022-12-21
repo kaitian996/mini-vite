@@ -1,5 +1,4 @@
 import type { pluginContext } from "../interface"
-import { rewriteImport } from "./moduleRewritePlugin"
 import { readFile } from "fs/promises"
 import { existsSync, readFileSync } from "fs"
 import path from "path"
@@ -12,7 +11,6 @@ export function moduleResolvePlugin(ctx: pluginContext) {
         }
         //将@modules替换
         const id = ctx.path.replace(moduleReg, '') //请求的路径,最后只剩下模块名称 如 vue
-        console.log("id", id);
         //拿到真实模块的路径
         ctx.type = "js"
         const content = await readFile(moduleResolve(id, root), "utf8")
