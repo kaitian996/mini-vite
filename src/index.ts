@@ -1,1 +1,1 @@
-export {createVitesServer} from './core/server'
+export {createServer} from './core/server'
