@@ -5,6 +5,7 @@ import { moduleRewritePlugin } from '../plugins/moduleRewritePlugin'
 import { moduleResolvePlugin } from '../plugins/moduleResolvePlugin'
 import { serveInjectPlugin } from '../plugins/serveInjectPlugin'
 import { vueResolvePlugin } from '../plugins/vueResolvePlugin'
+import picocolors from 'picocolors'
 const baseDir = process.cwd() //项目启动目录
 export function createServer(config?: Config) {
     const app = new Koa()
@@ -27,7 +28,7 @@ export function createServer(config?: Config) {
     resolvePlugins.forEach(plugin => plugin(context))
 
     app.listen(3000, async () => {
-        console.log("vite start at http://localhost:3000")
+        console.log(`${picocolors.green('vite start at')} : ${picocolors.blue('http://localhost:3000')}`)
     })
     return app
 }

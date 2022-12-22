@@ -31,6 +31,7 @@
     "es-module-lexer": "^1.1.0",
     "koa": "^2.14.1",
     "koa-static": "^5.0.0",
-    "magic-string": "^0.27.0"
+    "magic-string": "^0.27.0",
+    "picocolors": "^1.0.0"
   }
 }
